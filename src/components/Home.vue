@@ -14,7 +14,7 @@
         <p>
             <span>{{store.car.color}}</span> renkli <span>{{store.car.brand}}</span>
         </p>
-        <button class="btn btn-primary">Arabayı ve Sayacı Güncelle</button>
+        <button class="btn btn-primary" @click="updateCarCounter">Arabayı ve Sayacı Güncelle</button>
         <hr/>
         <button class="btn btn-primary">Yazılarım</button>
     </div>
@@ -34,6 +34,16 @@ const store = useCounterStore();
 // const substract =()=>{
 //     store.counter--;
 // }
+
+const updateCarCounter = ()=>{
+    store.$patch({
+        counter:100,
+        car:{
+            brand:'Toyota',
+            color:'Blue'
+        }
+    })
+}
 
 </script>
 
