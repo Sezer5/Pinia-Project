@@ -16,7 +16,10 @@
         </p>
         <button class="btn btn-primary" @click="updateCarCounter">Arabayı ve Sayacı Güncelle</button>
         <hr/>
-        <button class="btn btn-primary">Yazılarım</button>
+        <button class="btn btn-primary" @click="store.getPosts">Yazılarım</button>
+        <ul>
+            <li v-for="post in store.posts" :key="post.userId">{{post.title}}</li>
+        </ul>
     </div>
 </div>
 </template>
