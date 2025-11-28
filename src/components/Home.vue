@@ -5,14 +5,14 @@
     <div class="col-md-6">
         <p>
             <strong>
-                Sayı 7
+                Sayı {{store.counter}}
             </strong>
         </p>
-        <button class="btn btn-primary me-3">+</button>
-        <button class="btn btn-outline-secondary">-</button>
+        <button class="btn btn-primary me-3" @click="store.add">+</button>
+        <button class="btn btn-outline-secondary" @click="store.substract">-</button>
         <hr/>
         <p>
-            <span>beyaz</span> renkli <span>Fiat</span>
+            <span>{{store.car.color}}</span> renkli <span>{{store.car.brand}}</span>
         </p>
         <button class="btn btn-primary">Arabayı ve Sayacı Güncelle</button>
         <hr/>
@@ -22,6 +22,18 @@
 </template>
 
 <script setup>
+import {useCounterStore} from '@/stores/counter.js'
+
+
+const store = useCounterStore();
+
+// const add =()=>{
+//     store.counter++;
+// }
+
+// const substract =()=>{
+//     store.counter--;
+// }
 
 </script>
 
