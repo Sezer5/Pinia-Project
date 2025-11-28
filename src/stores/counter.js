@@ -10,6 +10,12 @@ export const useCounterStore = defineStore('counter',{
           color:'Beyaz'
       }
   }),
+
+  getters:{
+      getCounter(state){
+        return state.counter;
+      }
+  },
   actions:{
       add(){
         this.counter++;

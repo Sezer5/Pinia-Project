@@ -5,11 +5,11 @@
     <div class="col-md-6">
         <p>
             <strong>
-                Sayı {{store.counter}}
+                Sayı {{store.getCounter}}
             </strong>
         </p>
         <button class="btn btn-primary me-3" @click="store.add">+</button>
-        <button class="btn btn-outline-secondary" @click="store.substract">-</button>
+        <button class="btn btn-outline-secondary" @click="store.subtract">-</button>
         <hr/>
         <p>
             <span>{{store.car.color}}</span> renkli <span>{{store.car.brand}}</span>
